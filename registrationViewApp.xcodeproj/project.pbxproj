@@ -13,6 +13,7 @@
 		989F52A4276A189800205C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989F52A2276A189800205C5E /* Main.storyboard */; };
 		989F52A6276A189A00205C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989F52A5276A189A00205C5E /* Assets.xcassets */; };
 		989F52A9276A189A00205C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989F52A7276A189A00205C5E /* LaunchScreen.storyboard */; };
+		989F52B1276A3CC600205C5E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F52B0276A3CC600205C5E /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		989F52A5276A189A00205C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		989F52A8276A189A00205C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		989F52AA276A189A00205C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989F52B0276A3CC600205C5E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				989F529E276A189800205C5E /* SceneDelegate.swift */,
 				989F52A0276A189800205C5E /* ViewController.swift */,
 				989F52A2276A189800205C5E /* Main.storyboard */,
+				989F52B0276A3CC600205C5E /* AuthViewController.swift */,
 				989F52A5276A189A00205C5E /* Assets.xcassets */,
 				989F52A7276A189A00205C5E /* LaunchScreen.storyboard */,
 				989F52AA276A189A00205C5E /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989F52B1276A3CC600205C5E /* AuthViewController.swift in Sources */,
 				989F52A1276A189800205C5E /* ViewController.swift in Sources */,
 				989F529D276A189800205C5E /* AppDelegate.swift in Sources */,
 				989F529F276A189800205C5E /* SceneDelegate.swift in Sources */,
