@@ -16,12 +16,12 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let mainVc = segue.destination as! ViewController
-        nameLabel.text = mainVc.nameTF.text
+        let authVC = segue.destination as! ViewController
+        nameLabel.text = authVC.nameTF.text
     }
     
    
