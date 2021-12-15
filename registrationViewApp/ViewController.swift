@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var nameTF: UITextField!
@@ -17,39 +17,50 @@ class ViewController: UIViewController {
     @IBOutlet weak var forgotNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
-    var nameValue: String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTF.text = nameValue
+      //  textFieldShouldReturn(nameTF)  не работает :(
+      //  textFieldShouldReturn(passwordTF)
     }
     
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSegue" {
+        let authVC = segue.destination as! AuthViewController
+            authVC.name = nameTF.text
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     @IBAction func logInPressed() {
         guard let inputText = nameTF.text, !inputText.isEmpty else {
+            
             showAlert(title: "Text field is empty",
-                      message: "Plase enter your name")
+                      message: "Please enter your name")
             return
         }
         
         guard let inputText = passwordTF.text, !inputText.isEmpty else {
             showAlert(title: "Text field is empty",
-                      message: "Plase enter your password")
+                      message: "Please enter your password")
             return
         }
         
         if (nameTF.text == "User") && (passwordTF.text == "qwerty") {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let authVC = storyboard.instantiateViewController(identifier: "AuthViewController")
-        self.present(authVC, animated: true, completion: nil)
+       // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       // let authVC = storyboard.instantiateViewController(identifier: "AuthViewController")
+        performSegue(withIdentifier: "showSegue", sender: nil)
+       // self.present(authVC, animated: true, completion: nil)
         } else {
             showAlert(title: "ERROR", message: "login or password incorrect")
         }
     }
         
-    
-    
     @IBAction func giveAName() {
         showAlert(title: "Your name is", message: "User")
         
@@ -59,8 +70,15 @@ class ViewController: UIViewController {
         showAlert(title: "Your password is", message: "qwerty")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? AuthViewController else { return }
+        nameTF.text = ""
+        passwordTF.text = ""
+    }
+    
+    
+    
 }
-
 
 // MARK: - Private Methods
 extension ViewController {
@@ -75,5 +93,14 @@ extension ViewController {
     }
     
     
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTF:
+            passwordTF.becomeFirstResponder()
+        default:
+            resignFirstResponder()
+        }
+        return false
+    }
 }
 

@@ -13,18 +13,13 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameLabel.text = name
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let authVC = segue.destination as! ViewController
-        nameLabel.text = authVC.nameTF.text
-    }
-    
-   
     @IBAction func hideScreen() {
         self.dismiss(animated: true, completion: nil)
     }

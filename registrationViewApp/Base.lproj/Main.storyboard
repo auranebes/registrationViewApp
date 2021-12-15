@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -13,34 +13,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="registrationViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="BiF-sQ-80Z">
-                                <rect key="frame" x="51" y="200" width="312" height="187"/>
+                                <rect key="frame" x="51" y="200" width="273" height="187"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-6T-u4P">
-                                        <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="33.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="26"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qab-aU-MYP">
-                                        <rect key="frame" x="0.0" y="50.666666666666657" width="311" height="34.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="51" width="272" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <imageReference key="background" image="rectangle.portrait.and.arrow.right.fill" catalog="system" symbolScale="large"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="R2a-7x-07D"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mln-1Z-8dr">
-                                        <rect key="frame" x="0.0" y="102.33333333333331" width="131.66666666666666" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="102" width="131.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="26"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kYq-Qo-BHQ">
-                                        <rect key="frame" x="0.0" y="153" width="311" height="34"/>
+                                        <rect key="frame" x="0.0" y="153" width="272" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ExE-eO-sOO"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -50,7 +56,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-8b-lFF">
-                                <rect key="frame" x="160.66666666666666" y="450" width="93" height="47.666666666666686"/>
+                                <rect key="frame" x="141" y="450" width="93" height="47.5"/>
                                 <color key="backgroundColor" red="0.70601319342800095" green="0.96238988637924194" blue="0.5656702585697333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="GjF-CT-il3"/>
@@ -91,15 +97,15 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="STL-dl-4aS"/>
-                                    <segue destination="NL6-rz-Qsw" kind="presentation" id="uEu-qO-sw7"/>
+                                    <segue destination="NL6-rz-Qsw" kind="presentation" identifier="showSegue" id="uEu-qO-sw7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1l-HO-sH8">
-                                <rect key="frame" x="20" y="680" width="125" height="36"/>
+                                <rect key="frame" x="16" y="611" width="132" height="36"/>
                                 <color key="backgroundColor" red="0.48619576850000001" green="0.66928303659999999" blue="0.65583242909999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Forgot Name?">
+                                <state key="normal" title="Forgot Name">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -118,11 +124,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avQ-hf-7jb">
-                                <rect key="frame" x="233" y="680" width="161" height="36"/>
+                                <rect key="frame" x="195" y="610" width="164" height="36"/>
                                 <color key="backgroundColor" red="0.48627454040000001" green="0.66666668650000005" blue="0.6549019814" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Forgot Password?">
+                                <state key="normal" title="Forgot Password">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -145,15 +151,17 @@
                         <color key="backgroundColor" red="0.97614182407386962" green="0.99043212874848485" blue="0.88585094750158966" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="C1l-HO-sH8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="08j-2h-nUJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="avQ-hf-7jb" secondAttribute="bottom" constant="20" id="6FE-pT-raE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avQ-hf-7jb" secondAttribute="trailing" constant="20" id="9DF-qX-RAI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="avQ-hf-7jb" secondAttribute="bottom" constant="21" id="6FE-pT-raE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avQ-hf-7jb" secondAttribute="trailing" constant="16" id="9DF-qX-RAI"/>
                             <constraint firstItem="BiF-sQ-80Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="LMG-i6-lIA"/>
+                            <constraint firstItem="C1l-HO-sH8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="132:667" id="Qwj-fo-9Sy"/>
                             <constraint firstItem="WcN-8b-lFF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Swg-1J-Zlx"/>
                             <constraint firstItem="BiF-sQ-80Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Ull-bV-UmT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BiF-sQ-80Z" secondAttribute="trailing" constant="51" id="eUr-Te-5v1"/>
                             <constraint firstItem="WcN-8b-lFF" firstAttribute="top" secondItem="BiF-sQ-80Z" secondAttribute="bottom" constant="63" id="ff1-c7-hNf"/>
-                            <constraint firstItem="avQ-hf-7jb" firstAttribute="leading" secondItem="C1l-HO-sH8" secondAttribute="trailing" constant="88" id="jKF-j0-Naa"/>
-                            <constraint firstItem="C1l-HO-sH8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yQM-bM-Zxo"/>
+                            <constraint firstItem="avQ-hf-7jb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="164:667" id="hvG-wx-ovR"/>
+                            <constraint firstItem="avQ-hf-7jb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="C1l-HO-sH8" secondAttribute="trailing" constant="8" symbolic="YES" id="tex-e3-Wz8"/>
+                            <constraint firstItem="C1l-HO-sH8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yQM-bM-Zxo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -166,18 +174,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+            <point key="canvasLocation" x="18.399999999999999" y="81.409295352323838"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="m91-Xx-nin">
             <objects>
                 <viewController storyboardIdentifier="AuthViewController" id="NL6-rz-Qsw" customClass="AuthViewController" customModule="registrationViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTi-Tr-lwR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zv-8u-F1H">
-                                <rect key="frame" x="147.66666666666666" y="507" width="118.99999999999997" height="46"/>
+                                <rect key="frame" x="128" y="438" width="119" height="46"/>
                                 <color key="backgroundColor" red="0.96238988637924194" green="0.66725629570701905" blue="0.60078531893489284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="6XR-71-2H9"/>
@@ -200,19 +208,20 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="hideScreen" destination="NL6-rz-Qsw" eventType="touchUpInside" id="Yks-1y-iW5"/>
+                                    <segue destination="KzX-Mx-qGY" kind="unwind" unwindAction="unwindFor:" id="wD7-gV-HXf"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-ep-Ai4">
-                                <rect key="frame" x="89.666666666666671" y="208" width="234.66666666666663" height="39"/>
+                                <rect key="frame" x="70" y="208" width="235" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bn5-6J-4hY">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="39"/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cS5-YV-Lfd">
-                                        <rect key="frame" x="152.66666666666669" y="0.0" width="82" height="39"/>
+                                        <rect key="frame" x="153" y="0.0" width="82" height="39"/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -236,6 +245,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gf-ks-CJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KzX-Mx-qGY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="80.706521739130437"/>
         </scene>
