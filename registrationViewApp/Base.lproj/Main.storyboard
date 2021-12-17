@@ -179,13 +179,13 @@
         <!--Auth View Controller-->
         <scene sceneID="m91-Xx-nin">
             <objects>
-                <viewController storyboardIdentifier="AuthViewController" id="NL6-rz-Qsw" customClass="AuthViewController" customModule="registrationViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" modalPresentationStyle="fullScreen" id="NL6-rz-Qsw" customClass="AuthViewController" customModule="registrationViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTi-Tr-lwR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zv-8u-F1H">
-                                <rect key="frame" x="128" y="438" width="119" height="46"/>
+                                <rect key="frame" x="128" y="458" width="119" height="46"/>
                                 <color key="backgroundColor" red="0.96238988637924194" green="0.66725629570701905" blue="0.60078531893489284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="6XR-71-2H9"/>

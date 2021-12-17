@@ -17,19 +17,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var forgotNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
-
+    let nameUser = "User"
+    let passUser = "qwerty"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  textFieldShouldReturn(nameTF)  не работает :(
-      //  textFieldShouldReturn(passwordTF)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSegue" {
-        let authVC = segue.destination as! AuthViewController
-            authVC.name = nameTF.text
-        }
+     guard let authVC = segue.destination as? AuthViewController else { return }
+            authVC.name = nameUser
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,14 +48,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if (nameTF.text == "User") && (passwordTF.text == "qwerty") {
+        if (nameTF.text != nameUser) && (passwordTF.text != passUser) {
        // let storyboard = UIStoryboard(name: "Main", bundle: nil)
        // let authVC = storyboard.instantiateViewController(identifier: "AuthViewController")
-        performSegue(withIdentifier: "showSegue", sender: nil)
-       // self.present(authVC, animated: true, completion: nil)
-        } else {
             showAlert(title: "ERROR", message: "login or password incorrect")
+       // self.present(authVC, animated: true, completion: nil)
         }
+            
     }
         
     @IBAction func giveAName() {

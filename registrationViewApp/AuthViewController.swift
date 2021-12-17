@@ -13,7 +13,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
-    var name: String!
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
